@@ -1,26 +1,47 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# Ignore Python virtual environments
+.venv/
+venv/
 
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment files (DO NOT COMMIT API KEYS)
 .env
+*.env
 
-node_modules
-dist
-dist-ssr
-*.local
+# Ignore FastAPI logs and migrations (if using Alembic)
+logs/
+migrations/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Ignore compiled Python files
+*.egg-info/
+dist/
+build/
+*.log
+
+# Ignore database files (if using SQLite)
+*.sqlite3
+*.db
+
+# Ignore frontend dependencies and build files
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Ignore Vite & React cache
+.vite/
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# Ignore editor settings & OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+
+# Ignore Nginx & deployment files
+nginx.conf
+certbot/
